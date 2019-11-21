@@ -1,4 +1,5 @@
-sample	unit	platform	fq1	fq2
-A	1	ILLUMINA	data/reads/a.chr21.1.fq	data/reads/a.chr21.2.fq
-B	1	ILLUMINA	data/reads/b.chr21.1.fq	data/reads/b.chr21.2.fq
-B	2	ILLUMINA	data/reads/b.chr21.1.fq	
+sample	unit	platform	fq1
+BSAF7_1_SUS	1	ILLUMINA	fastq/BSA_F7_pools_A01_F7_1_SUS_ATCACG_R1.fastq.gz
+BSAF7_1_SUS	2	ILLUMINA	fastq/BSA_F7_pools_A01_F7_1_SUS_test.fastq.gz
+BSAF7_2_SUS	1	ILLUMINA	fastq/BSA_F7_pools_B01_F7_2_SUS_test.fastq.gz
+
