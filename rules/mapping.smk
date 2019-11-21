@@ -61,20 +61,20 @@ rule mark_duplicates:
         "0.26.1/bio/picard/markduplicates"
 
 
-rule recalibrate_base_qualities:
-    input:
-        bam=get_recal_input(),
-        bai=get_recal_input(bai=True),
-        ref=config["ref"]["genome"],
-        known=config["ref"]["known-variants"]
-    output:
-        bam=protected("recal/{sample}-{unit}.bam")
-    params:
-        extra=get_regions_param() + config["params"]["gatk"]["BaseRecalibrator"]
-    log:
-        "logs/gatk/bqsr/{sample}-{unit}.log"
-    wrapper:
-        "0.27.1/bio/gatk/baserecalibrator"
+# rule recalibrate_base_qualities:
+#    input:
+#        bam=get_recal_input(),
+#        bai=get_recal_input(bai=True),
+#        ref=config["ref"]["genome"],
+#        known=config["ref"]["known-variants"]
+#    output:
+#        bam=protected("recal/{sample}-{unit}.bam")
+#    params:
+#        extra=get_regions_param() + config["params"]["gatk"]["BaseRecalibrator"]
+#    log:
+#        "logs/gatk/bqsr/{sample}-{unit}.log"
+#    wrapper:
+#        "0.27.1/bio/gatk/baserecalibrator"
 
 
 rule samtools_index:
